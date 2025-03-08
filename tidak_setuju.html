@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuisioner - Tidak Setuju dengan AIPS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d9534f;
+        }
+        label {
+            font-weight: bold;
+        }
+        .btn {
+            background: #d9534f;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Kuisioner - Anda Tidak Setuju dengan AIPS</h2>
+        <form id="aipsFormTidakSetuju">
+            <label>1. Apa alasan utama Anda tidak setuju dengan AI dalam politik?</label><br>
+            <input type="radio" name="q1" value="AI terlalu berisiko"> AI terlalu berisiko
+            <input type="radio" name="q1" value="AI tidak bisa menggantikan manusia"> AI tidak bisa menggantikan manusia
+            <input type="radio" name="q1" value="AI bisa disalahgunakan"> AI bisa disalahgunakan
+            <input type="radio" name="q1" value="AI tidak relevan dalam politik"> AI tidak relevan dalam politik
+            <br><br>
+
+            <label>2. Apa dampak negatif AI terhadap kebijakan publik?</label><br>
+            <input type="radio" name="q2" value="Meningkatkan ketimpangan sosial"> Meningkatkan ketimpangan sosial
+            <input type="radio" name="q2" value="Mengurangi peran manusia"> Mengurangi peran manusia
+            <input type="radio" name="q2" value="Rentan terhadap manipulasi"> Rentan terhadap manipulasi
+            <input type="radio" name="q2" value="Tidak berdampak"> Tidak berdampak
+            <br><br>
+
+            <label>3. Apakah AI dapat menurunkan kesejahteraan manusia?</label><br>
+            <input type="radio" name="q3" value="Ya, sangat menurunkan"> Ya, sangat menurunkan
+            <input type="radio" name="q3" value="Ya, cukup menurunkan"> Ya, cukup menurunkan
+            <input type="radio" name="q3" value="Tidak terlalu berpengaruh"> Tidak terlalu berpengaruh
+            <input type="radio" name="q3" value="Tidak berdampak sama sekali"> Tidak berdampak sama sekali
+            <br><br>
+
+            <button type="button" class="btn" onclick="submitForm()">Kirim Jawaban</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        function submitForm() {
+            document.getElementById("responseMessage").innerText = "Terima kasih! Jawaban Anda telah dikirim.";
+        }
+    </script>
+
+</body>
+</html>

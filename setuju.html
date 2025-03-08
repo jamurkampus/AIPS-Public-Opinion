@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuisioner - Setuju dengan AIPS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2575fc;
+        }
+        label {
+            font-weight: bold;
+        }
+        .btn {
+            background: #2575fc;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #1a5bbd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Kuisioner - Anda Setuju dengan AIPS</h2>
+        <form id="aipsFormSetuju">
+            <label>1. Bagaimana menurut Anda dampak AI dalam kebijakan publik?</label><br>
+            <input type="radio" name="q1" value="Sangat Baik"> Sangat Baik
+            <input type="radio" name="q1" value="Baik"> Baik
+            <input type="radio" name="q1" value="Netral"> Netral
+            <input type="radio" name="q1" value="Buruk"> Buruk
+            <br><br>
+
+            <label>2. Apakah AI mampu meningkatkan kesejahteraan manusia?</label><br>
+            <input type="radio" name="q2" value="Ya, sangat mampu"> Ya, sangat mampu
+            <input type="radio" name="q2" value="Ya, cukup mampu"> Ya, cukup mampu
+            <input type="radio" name="q2" value="Tidak terlalu mampu"> Tidak terlalu mampu
+            <input type="radio" name="q2" value="Tidak mampu sama sekali"> Tidak mampu sama sekali
+            <br><br>
+
+            <label>3. Bagaimana peran AI dalam pengambilan keputusan pemerintah?</label><br>
+            <input type="radio" name="q3" value="Sangat membantu"> Sangat membantu
+            <input type="radio" name="q3" value="Membantu"> Membantu
+            <input type="radio" name="q3" value="Netral"> Netral
+            <input type="radio" name="q3" value="Menghambat"> Menghambat
+            <br><br>
+
+            <button type="button" class="btn" onclick="submitForm()">Kirim Jawaban</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        function submitForm() {
+            document.getElementById("responseMessage").innerText = "Terima kasih! Jawaban Anda telah dikirim.";
+        }
+    </script>
+
+</body>
+</html>
