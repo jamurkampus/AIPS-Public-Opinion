@@ -1,0 +1,20 @@
+<script>
+    function submitForm() {
+        if (localStorage.getItem("aipsAlreadyVoted")) {
+            alert("Anda sudah mengisi kuisioner ini. Anda tidak dapat memilih lagi.");
+            return;
+        }
+
+        const formData = {
+            q1: document.querySelector('input[name="q1"]:checked')?.value || "",
+            q2: document.querySelector('input[name="q2"]:checked')?.value || "",
+            q3: document.querySelector('input[name="q3"]:checked')?.value || ""
+        };
+
+        localStorage.setItem("aipsSurveyData", JSON.stringify(formData));
+        localStorage.setItem("aipsAlreadyVoted", "true");
+
+        document.getElementById("responseMessage").innerText = "Terima kasih! Jawaban Anda telah dikirim.";
+        alert("Jawaban Anda telah disimpan. Anda tidak dapat memilih lagi.");
+    }
+</script>
